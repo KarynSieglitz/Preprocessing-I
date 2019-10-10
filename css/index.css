@@ -134,16 +134,14 @@ html,
 body {
   height: 100%;
 }
-* {
-  border: 1px solid gray !important;
-}
 body {
   font-family: 'Roboto Slab', serif;
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
+  background-color: #fdfdfd;
 }
 body h1 {
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 body h2 {
   font-size: 1.5rem;
@@ -155,9 +153,173 @@ body h2 {
 body a {
   text-decoration: none;
 }
-body div {
+body div:not(.formContainer) {
   margin-top: 15px;
 }
-body nav a {
+body p {
+  padding-top: 1%;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header nav a {
   font-family: 'Lato', sans-serif;
+  padding: 1%;
+  font-size: 1.2rem;
+  color: slategray;
+}
+header nav a:hover {
+  color: black;
+}
+header .intro {
+  background: url('/images/heroImg.jpg');
+  height: 450px;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+header .intro h1,
+header .intro p {
+  margin-left: 10%;
+}
+@media (max-width: 500px) {
+  header .intro h1,
+  header .intro p {
+    width: 75%;
+  }
+}
+header .intro p {
+  font-size: 1.4rem;
+}
+.aboutMe {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .aboutMe {
+    width: 100%;
+  }
+}
+.aboutMe .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  padding-top: 1%;
+}
+@media (max-width: 500px) {
+  .aboutMe .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+.aboutMe #about {
+  width: 60%;
+}
+.aboutMe #skills {
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .aboutMe #skills {
+    width: 75%;
+    margin-top: 35px;
+  }
+}
+.aboutMe #skills h2 {
+  padding-bottom: 7px;
+}
+.aboutMe #skills ul {
+  border: 1px solid silver;
+}
+.aboutMe #skills li {
+  border: 1px solid silver;
+  font-size: 1.2rem;
+  padding: 6px;
+}
+#work {
+  font-family: 'Lato', sans-serif;
+  width: 75%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+}
+#work table {
+  width: 100%;
+  border: 1px solid silver;
+}
+#work th,
+#work td {
+  padding: 12px;
+  text-align: left;
+}
+#work th {
+  background-color: #c4eed7;
+  padding: 1%;
+  border: 1px solid silver;
+}
+#work td {
+  padding: 1%;
+  border: 1px solid silver;
+}
+#contact {
+  align-items: center;
+  width: 75%;
+  font-family: 'Lato', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 75px;
+}
+#contact input {
+  padding: 1%;
+  margin: 5px;
+  width: 100%;
+  background-color: ghostwhite;
+  border: 1px solid silver;
+}
+#contact textarea {
+  width: 100%;
+  padding: 1%;
+  margin: 5px;
+  background-color: ghostwhite;
+  resize: none;
+}
+#contact .button {
+  text-align: center;
+}
+#contact button[type=submit] {
+  background-color: #c4eed7;
+  width: 20%;
+  padding: 1%;
+  border: none;
+  font-size: 1.2rem;
+  color: dimgray;
+}
+#contact button[type=submit]:hover {
+  background-color: #84c8a2;
+  color: white;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  margin-bottom: 25px;
 }

@@ -7,6 +7,9 @@
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +17,101 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  
+  <header>
+    
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="intro">
+      <h1>Karyn Sieglitz - Web Developer</h1>
+      <p>Dedicated to creating accessible products that help people in their everday lives.</p>
+    </div>
+  </header>
+
+  <section class="aboutMe">
+    
+    <div class="container">
+      <div id="about">
+        <h2>Lorem Ipsum Dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, consectetur nostrum unde culpa illum dolor accusamus nulla est! Consectetur iusto modi quia consequuntur ducimus exercitationem illo magnam in fuga error? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, quis earum, excepturi temporibus veniam velit perspiciatis atque praesentium consectetur quia possimus accusamus repellendus esse reiciendis, iusto veritatis perferendis commodi id.</p>
+      </div>
+  
+      <div id="skills">
+        <h2>My Skills</h2>
+        <ul>
+          <li>Design</li>
+          <li>CSS</li>
+          <li>LESS</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div>
+      <table>
+          <tr>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Years</th>
+            </tr>
+            <tr>
+              <td>Self-employed</td>
+              <td>Artist</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>BirdMom</td>
+              <td>Treat Dispenser</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>TotallyMadeUp</td>
+              <td>Kitten Wrangler</td>
+              <td>1</td>
+            </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contactContainer">
+      
+      <form action="">
+        <div class="formContainer">
+          <label for="Name">Name:
+            <input type="text">
+          </label>
+        </div>
+        <div class="formContainer">
+          <label for="Email">Email:
+            <input type="text">
+          </label>
+        </div>
+        <div class="formContainer">
+          <label for="Message">Message:
+            <textarea name="Message" id="" cols="30" rows="10"></textarea>
+          </label>
+        </div>
+      </form>
+
+      <div class="button">
+        <button type="submit">Submit</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2019 Karyn Sieglitz</p>
+  </footer>
+
 </body>
 </html>

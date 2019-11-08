@@ -54,6 +54,260 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+// CSS starts here
+
+@divcolor: ghostwhite;
+@smallpadding: 1%;
+@smallmargin: 5px;
+@width100: 100%;
+@lato: 'Lato', sans-serif;
+@font18: 1.2rem;
+@textborder: 1px solid silver;
+@accentcolor: rgb(196, 238, 215);
+
+
+.column(){
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.shrink(){
+	width: 75%;
+}
+
+body {
+	font-family: 'Roboto Slab', serif;
+	width: @width100;
+	margin: 0 auto;
+	background-color: #fdfdfd;
+
+	h1 {
+		font-size: 2.6rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h1, h2 { 
+		font-family: 'Lato', sans-serif;
+	} // closes h brackets 
+
+	a {
+		text-decoration: none;
+	}
+
+	div:not(.formContainer) {
+		margin-top: 15px;
+		
+	}
+
+	p {
+		padding-top: @smallpadding;
+		font-size: 1.1rem;
+		line-height: 1.4rem;
+	}
+	
+} // closes body
+
+
+
+header {
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+
+	@media (max-width: 500px) {
+		.column();
+	}
+
+	a {
+		font-family: @lato;
+		padding: @smallpadding;
+		font-size: @font18;
+		color: slategray;
+
+		&:hover {
+			color: black;
+		}
+	} //closes a
+
+} //closes nav
+
+.intro {
+	background: url('/images/heroImg.jpg');
+	height: 450px;
+	background-size: cover;
+	color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+	
+	
+
+	h1, p {
+		margin-left: 10%;
+
+		@media (max-width: 500px) {
+			.shrink();
+		}
+	}
+
+	p {
+		font-size: 1.4rem;
+	}
+} //closes intro
+}
+
+.aboutMe {
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: center;
+
+	@media (max-width: 500px) {
+		width: @width100;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 75%;
+		padding-top: @smallpadding;
+
+		@media (max-width:500px){
+			.column();
+			width: @width100;
+		}
+
+	}
+
+	
+	#about {
+		width: 60%;
+
+	}
+
+	#skills {
+		width: 30%;
+		
+		@media (max-width: 500px) {
+			width: 75%;
+			margin-top: 35px;
+		}
+
+		h2 {
+			padding-bottom: 7px;
+		}
+
+		ul {
+			border: 1px solid silver;
+			
+		}
+
+		li {
+			border: 1px solid silver;
+			font-size: 1.2rem;
+			padding: 6px;
+		}
+	}
+}
+
+#work {
+	font-family: @lato;
+	width: 75%;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 55px;
+
+	table {
+		width: @width100;
+		border: @textborder;
+
+	}
+
+	th, td {
+		padding: 12px;
+		text-align: left;
+	}
+
+	th {
+		background-color: @accentcolor;
+		padding: @smallpadding;
+		border: @textborder;
+	}
+
+	td {
+		padding: @smallpadding;
+		border: @textborder;
+	}
+
+}
+
+
+#contact {
+
+	align-items: center;
+	width: 75%;
+	font-family: @lato;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 75px;
+	
+
+	input {
+		padding: @smallpadding;
+		margin: @smallmargin;
+		width: @width100;
+		background-color: @divcolor;
+		border: @textborder;
+	}
+
+	textarea {
+		width: @width100;
+		padding: @smallpadding;
+		margin: @smallmargin;
+		background-color: @divcolor;
+		resize: none;
+
+	}
+
+	.button {
+		text-align: center;
+	}
+
+	button[type=submit] {
+
+		background-color: @accentcolor;
+		width: 20%;
+		padding: @smallpadding;
+		border: none;
+		font-size: 1.2rem;
+		color: dimgray;
+		
+		
+		&:hover {
+			background-color: #84c8a2;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+@media (max-width: 500px){
+
+}
